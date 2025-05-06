@@ -1,0 +1,131 @@
+/* CalendarView.css */
+
+.calendar-container .rbc-calendar {
+  background-color: rgba(30, 41, 59, 0.6); /* Slightly transparent dark background */
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border) / 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.calendar-container .rbc-toolbar {
+  margin-bottom: 1rem;
+  color: hsl(var(--foreground));
+}
+
+.calendar-container .rbc-toolbar button {
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--secondary));
+  border: 1px solid hsl(var(--border));
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.3rem;
+  transition: background-color 0.2s ease;
+}
+
+.calendar-container .rbc-toolbar button:hover,
+.calendar-container .rbc-toolbar button:focus {
+  background-color: hsl(var(--accent));
+  border-color: hsl(var(--accent-foreground));
+}
+
+.calendar-container .rbc-toolbar button.rbc-active {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border-color: hsl(var(--primary));
+}
+
+.calendar-container .rbc-toolbar label {
+  color: hsl(var(--foreground));
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.calendar-container .rbc-header {
+  background-color: hsl(var(--muted) / 0.3);
+  color: hsl(var(--muted-foreground));
+  padding: 0.5rem 0;
+  border-bottom: 1px solid hsl(var(--border) / 0.5);
+  text-align: center;
+}
+
+.calendar-container .rbc-day-bg {
+  border-left: 1px solid hsl(var(--border) / 0.3);
+}
+.calendar-container .rbc-day-bg:first-child {
+  border-left: none;
+}
+
+.calendar-container .rbc-month-row {
+  border-bottom: 1px solid hsl(var(--border) / 0.3);
+}
+
+.calendar-container .rbc-off-range-bg {
+  background-color: hsl(var(--background) / 0.2);
+}
+
+.calendar-container .rbc-today {
+  background-color: hsl(var(--accent) / 0.3);
+}
+
+.calendar-container .rbc-event {
+  border-radius: 4px;
+  padding: 2px 5px;
+  font-size: 0.8em;
+  border: none;
+  color: hsl(var(--primary-foreground));
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.calendar-container .rbc-event:focus {
+  outline: none;
+}
+
+/* Custom Event Styling */
+.calendar-container .rbc-event-income {
+  background-color: rgba(34, 197, 94, 0.7); /* Green for income */
+}
+
+.calendar-container .rbc-event-expense {
+  background-color: rgba(239, 68, 68, 0.7); /* Red for expense */
+}
+
+.calendar-container .rbc-event-predicted {
+  background-color: rgba(59, 130, 246, 0.6); /* Blue for predicted */
+  border: 1px dashed rgba(59, 130, 246, 0.9);
+}
+
+.calendar-container .rbc-event-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.calendar-container .rbc-event-label {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 5px;
+}
+
+.calendar-container .rbc-event-amount {
+  font-weight: 600;
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+.calendar-container .rbc-show-more {
+  color: hsl(var(--accent-foreground));
+  background-color: transparent;
+  font-size: 0.8em;
+}
+
+.calendar-container .rbc-selected-cell {
+  background-color: hsl(var(--accent) / 0.4);
+}
+
